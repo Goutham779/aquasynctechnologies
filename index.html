@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaSync - Hydration Meets Innovation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<a href="https://yourname.github.io/aquasync-smartwaterbottle" target="_blank">
+    <button class="px-6 py-3 bg-blue-500 text-white rounded">Open Website</button>
+</a>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#020b1c', 	 /* Deepest blue from poster background */
+                            mid: '#081833', 	 /* Mid gradient tone */
+                            accent: '#00f2ff', 	 /* Cyan neon glow */
+                            text: '#e0f7fa' 	 /* Light cool white */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Urbanist', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon': '0 0 20px rgba(0, 242, 255, 0.5), 0 0 60px rgba(0, 242, 255, 0.3)',
+                        'neon-sm': '0 0 10px rgba(0, 242, 255, 0.5)',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: radial-gradient(circle at 50% 20%, #0f2e5c 0%, #020b1c 60%, #000000 100%);
+            color: #e0f7fa;
+            overflow-x: hidden;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020b1c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #081833;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00f2ff;
+        }
+
+        /* Bottle Glow Effect */
+        .bottle-glow {
+            position: relative;
+        }
+        .bottle-glow::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 600px;
+            background: radial-gradient(ellipse at center, rgba(0, 242, 255, 0.15) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="font-sans min-h-screen flex flex-col">
+
+    <nav class="w-full py-6 px-6 md:px-12 flex justify-between items-center fixed top-0 left-0 z-50 backdrop-blur-md bg-brand-dark/30 border-b border-white/5">
+        <div class="text-2xl font-bold tracking-wider text-white">
+            AQUA<span class="text-brand-accent">SYNC</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide uppercase">
+            <a href="#features" class="hover:text-brand-accent transition-colors">Features</a>
+            <a href="#app" class="hover:text-brand-accent transition-colors">App</a>
+            <a href="#community" class="hover:text-brand-accent transition-colors">Community</a>
+        </div>
+        <button onclick="document.getElementById('shop-section').scrollIntoView({behavior: 'smooth'})" class="bg-transparent border border-brand-accent text-brand-accent px-6 py-2 rounded-full font-bold text-sm hover:bg-brand-accent hover:text-black transition-all duration-300 shadow-neon-sm">
+            PRE-ORDER
+        </button>
+    </nav>
+
+    <header class="relative pt-32 pb-20 px-6 md:px-12 flex flex-col md:flex-row items-center justify-center min-h-screen w-full max-w-7xl mx-auto">
+        
+        <div class="md:w-1/2 text-center md:text-left z-10 order-2 md:order-1 mt-12 md:mt-0">
+            <h1 class="text-5xl md:text-7xl font-black leading-tight mb-4 drop-shadow-lg">
+                Hydration Meets <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-brand-accent">Innovation</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-brand-text/80 font-light mb-8 tracking-wide">
+                The Smart Water Bottle That Thinks for You.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <button onclick="document.getElementById('shop-section').scrollIntoView({behavior: 'smooth'})" class="bg-brand-accent text-black px-8 py-4 rounded-none font-bold text-lg tracking-widest hover:bg-white transition-all duration-300 shadow-neon transform hover:-translate-y-1">
+                    SHOP NOW
+                </button>
+                <button class="border border-white/20 text-white px-8 py-4 rounded-none font-bold text-lg tracking-widest hover:border-brand-accent hover:text-brand-accent transition-all duration-300">
+                    WATCH VIDEO
+                </button>
+            </div>
+
+            <div class="mt-12 flex items-center justify-center md:justify-start gap-6 text-sm text-gray-400">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-check text-brand-accent"></i> Free Shipping
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-check text-brand-accent"></i> 1 Year Warranty
+                </div>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 flex justify-center items-center z-10 order-1 md:order-2 bottle-glow animate-float">
+            <div class="relative group cursor-pointer">
+                 <div class="relative w-[200px] h-[500px] rounded-[40px] bg-gradient-to-b from-gray-800 to-black shadow-2xl border border-gray-800 flex flex-col items-center justify-start pt-12 overflow-hidden ring-1 ring-white/10">
+                    <div class="absolute top-0 w-full h-24 bg-gray-900 border-b border-gray-700"></div>
+                    <div class="absolute top-24 w-full h-1 bg-brand-accent shadow-[0_0_15px_rgba(0,242,255,1)]"></div>
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-20"></div>
+                    
+                    <div class="mt-32 font-mono text-5xl text-white font-bold drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] group-hover:text-brand-accent transition-colors">
+                        68<span class="text-2xl align-top">°</span>
+                    </div>
+                    
+                    <div class="absolute left-4 top-0 bottom-0 w-8 bg-gradient-to-r from-white/5 to-transparent skew-x-6"></div>
+                 </div>
+
+                 <div class="absolute -right-10 top-1/3 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-xl shadow-xl">
+                      <div class="text-xs text-gray-300 uppercase tracking-wider mb-1">Daily Goal</div>
+                      <div class="text-xl font-bold text-brand-accent">85%</div>
+                 </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="py-20 bg-black/30 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Intelligent Features</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
+                <div class="p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 border border-white/5 hover:border-brand-accent/50 group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-dark flex items-center justify-center border border-brand-accent/30 group-hover:shadow-neon-sm transition-all">
+                        <i class="fa-solid fa-droplet text-2xl text-brand-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Auto Hydration<br>Tracking</h3>
+                    <p class="text-sm text-gray-400">Sensors calculate every sip you take automatically.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 border border-white/5 hover:border-brand-accent/50 group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-dark flex items-center justify-center border border-brand-accent/30 group-hover:shadow-neon-sm transition-all">
+                        <i class="fa-regular fa-bell text-2xl text-brand-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Smart<br>Alerts</h3>
+                    <p class="text-sm text-gray-400">Glows to remind you when it's time to drink.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 border border-white/5 hover:border-brand-accent/50 group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-dark flex items-center justify-center border border-brand-accent/30 group-hover:shadow-neon-sm transition-all">
+                        <i class="fa-solid fa-temperature-half text-2xl text-brand-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Thermal<br>Control</h3>
+                    <p class="text-sm text-gray-400">Keeps water icy cold for 24h or hot for 12h.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 border border-white/5 hover:border-brand-accent/50 group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-dark flex items-center justify-center border border-brand-accent/30 group-hover:shadow-neon-sm transition-all">
+                        <i class="fa-solid fa-bolt text-2xl text-brand-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Rechargeable<br>Battery</h3>
+                    <p class="text-sm text-gray-400">Long-lasting magnetic charging for 30 days of use.</p>
+                </div>
+
+                <div class="p-6 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 hover:-translate-y-2 border border-white/5 hover:border-brand-accent/50 group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-brand-dark flex items-center justify-center border border-brand-accent/30 group-hover:shadow-neon-sm transition-all">
+                        <i class="fa-solid fa-mobile-screen text-2xl text-brand-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">App<br>Integration</h3>
+                    <p class="text-sm text-gray-400">Syncs with Apple Health, Fitbit & Google Fit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="app" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-brand-mid/20 skew-y-3 transform origin-bottom-right"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 space-y-6">
+                <h4 class="text-brand-accent font-bold tracking-wider uppercase text-sm">Connected Ecosystem</h4>
+                <h2 class="text-4xl font-bold">Data Driven Hydration</h2>
+                <p class="text-gray-300 text-lg">
+                    Unlock location-based triggers. Get reminded to hydrate when you enter your gym or arrive at the office. Join the <span class="text-brand-accent">#30DaysHydrated</span> challenge.
+                </p>
+                <div class="flex gap-4 pt-4">
+                    <button class="bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg flex items-center gap-3 transition">
+                        <i class="fa-brands fa-apple text-2xl"></i>
+                        <div class="text-left leading-tight">
+                            <div class="text-xs">Download on the</div>
+                            <div class="font-bold">App Store</div>
+                        </div>
+                    </button>
+                    <button class="bg-white/10 hover:bg-white/20 px-6 py-3 rounded-lg flex items-center gap-3 transition">
+                        <i class="fa-brands fa-google-play text-2xl"></i>
+                        <div class="text-left leading-tight">
+                            <div class="text-xs">GET IT ON</div>
+                            <div class="font-bold">Google Play</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="w-64 h-[500px] border-4 border-gray-800 rounded-[3rem] bg-gray-900 relative overflow-hidden shadow-2xl">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-gray-800 rounded-b-xl z-20"></div>
+                    <div class="p-6 h-full flex flex-col justify-between bg-gradient-to-b from-brand-mid to-black">
+                        <div class="mt-12">
+                            <div class="text-3xl font-bold">1,250 ml</div>
+                            <div class="text-sm text-gray-400">Today's Intake</div>
+                        </div>
+                        <div class="space-y-4 mb-12">
+                            <div class="bg-white/10 p-3 rounded-lg flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <div class="text-xs text-brand-accent">Location Trigger</div>
+                                    <div class="text-sm font-bold">Gym Zone Entered</div>
+                                </div>
+                            </div>
+                            <div class="h-32 bg-gradient-to-t from-brand-accent/20 to-transparent rounded-xl flex items-end p-2">
+                                <div class="w-full h-1/2 bg-brand-accent/30 rounded animate-pulse"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop-section" class="mt-auto py-24 text-center relative bg-brand-dark border-t border-white/5">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-accent/5 via-transparent to-transparent"></div>
+        
+        <div class="relative z-10 max-w-3xl mx-auto px-6">
+            <h2 class="text-4xl md:text-6xl font-black mb-6">Ready to Drink Smarter?</h2>
+            <p class="text-xl text-gray-400 mb-10">Join the revolution. Limited stock available for the initial launch.</p>
+            
+            <button class="bg-brand-accent text-black px-12 py-5 rounded-full font-bold text-xl tracking-wider hover:scale-105 hover:shadow-neon transition-all duration-300">
+                BUY NOW - $59.99
+            </button>
+        </div>
+
+        <footer class="mt-24 text-gray-500 text-sm">
+            <div class="flex justify-center gap-6 mb-8 text-xl">
+                <a href="#" class="hover:text-brand-accent transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-brand-accent transition"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="hover:text-brand-accent transition"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+            <p class="mb-2">#AquaSync #HydrationEvolved #GlowToDrink</p>
+            <p>&copy; 2024 AquaSync Inc. All rights reserved.</p>
+        </footer>
+    </section>
+
+    <script>
+        // Simple interaction for "Shop Now" to simulate adding to cart
+        document.querySelectorAll('button').forEach(btn => {
+            if(btn.textContent.includes('BUY NOW') || btn.textContent.includes('SHOP NOW')) {
+                btn.addEventListener('click', function() {
+                    const originalText = this.innerText;
+                    this.innerText = "ADDED TO CART!";
+                    this.classList.add('bg-green-400', 'text-black');
+                    setTimeout(() => {
+                        this.innerText = originalText;
+                        this.classList.remove('bg-green-400', 'text-black');
+                    }, 2000);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
